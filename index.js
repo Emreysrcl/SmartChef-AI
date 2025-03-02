@@ -55,7 +55,7 @@ createDirectories();
 
 
 // Google Generative AI
-const genAI = new GoogleGenerativeAI(process.env.GEMINE_API_KEY);
+const genAI = new GoogleGenerativeAI(AIzaSyBrtd9Hq0OoMIG_klOMsW02AKI_dVbrdQI);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 app.use(session({
