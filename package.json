@@ -1,0 +1,31 @@
+{
+  "name": "smartchefai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.8.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "from": "^0.1.7",
+    "fs": "^0.0.1-security",
+    "googleapis": "^146.0.0",
+    "import": "^0.0.6",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.84.1",
+    "particlesjs": "file:particles.js-master",
+    "path": "^0.12.7",
+    "pg": "^8.13.2"
+  }
+}

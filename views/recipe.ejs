@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container my-5">
+        <div class="p-5 pb-5 text-center bg-body-tertiary rounded-3 border shadow-lg ">
+            <img src="assets/chef.png" class="img-fluid" alt="Recipe" width="200" style=" align-items:center;">
+
+            <h1 class="col-lg-8 mx-auto fs-5 text-muted">
+                Input your new ingredients and get your meal recipe again.
+            </h1>
+
+            <div class="d-flex justify-content-center mt-4">
+                <form action="/search" method="POST" class="mt-4">
+                    <div class="input-group">
+                        <input type="text" name="ingredients" class="form-control rounded-start-pill px-4" 
+                            placeholder="Enter ingredients..." required>
+                        <button class="btn btn-primary rounded-end-pill px-4">
+                            <img src="assets/search.png" width="16" height="16" style="margin-bottom:5px; align-items:center;" class="me-2">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <% if (data.meals.length > 0) { %>
+                <% data.meals.forEach(meal => { %>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card shadow-sm w-100">
+                           
+                                <% if (meal.image) { %>
+                                    <img src="<%= meal.image %>" class="card-img-top" alt="Meal Image" style="height: 300px;">
+                                    
+                                <% } %>
+                                
+                           
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><%= meal.name %></h5>
+                                <p class="card-text flex-grow-1"><strong>Recipe:</strong> <%= meal.recipe %></p>
+
+                                <% if (meal.video) { %>
+                                    <a href="<%= meal.video %>" target="_blank" class="btn btn-primary mt-auto mb-3"><img src="/assets/video.png" width="30px" height="30px"></a>
+                                <% } %>
+
+                                <% if (meal.missingIngredients.length > 0) { %>
+                                    <p><strong>Missing Ingredients:</strong> 
+                                        <% meal.missingIngredients.forEach(ingredient => { %>
+                                            <span class="badge bg-danger"><%= ingredient %></span>
+                                        <% }) %>
+                                    </p>
+                                    <form action="/save" method="POST" class="d-flex justify-content-center">
+                                        <input type="hidden" name="userId" value="<%= user.id %>">
+                                        <input type="hidden" name="mealId" value="<%= meal.id %>">
+                                        <input type="hidden" name="name" value="<%= meal.name %>">
+                                        <input type="hidden" name="missingIngredients" value="<%= meal.missingIngredients.join(', ') %>">
+                                        <input type="hidden" name="recipe" value="<%= meal.recipe %>">
+                                        <input type="hidden" name="video" value="<%= meal.video %>">
+                                        <button class="btn btn-success btn-sm"><img src="assets/save.png" width="16px" height="16px"></button>
+                                    </form>
+                                <% } else { %>
+                                    <p class="text-success mt-2"><strong>All ingredients available!</strong></p>
+                                    <form action="/save" method="POST" class="d-flex justify-content-center">
+                                        <input type="hidden" name="userId" value="<%= user.id %>">
+                                        <input type="hidden" name="mealId" value="<%= meal.id %>">
+                                        <input type="hidden" name="name" value="<%= meal.name %>">
+                                        <input type="hidden" name="missingIngredients" value="">
+                                        <input type="hidden" name="recipe" value="<%= meal.recipe %>">
+                                        <input type="hidden" name="video" value="<%= meal.video %>">
+                                        <button class="btn btn-success btn-sm"><img src="assets/save.png" width="16px" height="16px"></button>
+                                    </form>
+                                <% } %>
+                            </div>
+                        </div>  
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="alert alert-warning text-center w-75 mx-auto" role="alert">
+                    <strong>No food found!</strong> Try adding different ingredients.
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".save-btn").forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.preventDefault(); 
+    
+                    const form = this.closest("form"); 
+                    const formData = new FormData(form);
+    
+                    fetch("/save", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.json()) 
+                    .then(data => {
+                        if (data.success) {
+                           
+                            this.innerHTML = '<img src="assets/saved.png" alt="Saved">';
+                        } else {
+                            alert("Tarif kaydedilemedi!");
+                        }
+                    })
+                    .catch(error => console.error("Error:", error));
+                });
+            });
+        });
+
+       
+            document.addEventListener("DOMContentLoaded", function() {
+                const deleteButtons = document.querySelectorAll(".btn-danger");
+        
+                deleteButtons.forEach(button => {
+                    button.addEventListener("click", function(event) {
+                        const confirmDelete = confirm("Are you sure you want to delete this recipe?");
+                        if (!confirmDelete) {
+                            event.preventDefault(); 
+                        }
+                    });
+                });
+            });
+        
+        
+    </script>
+    
+    <%- include('partials/footer') %>
+</body>
+</html>

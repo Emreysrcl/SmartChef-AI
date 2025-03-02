@@ -1,0 +1,80 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    margin-top: 90px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Resim */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexbox düzeni */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .col-lg-6 {
+        width: 100%;
+        text-align: center;
+    }
+    .input-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    .lead {
+        font-size: 0.9rem;
+    }
+    .input-group {
+        width: 100%;
+    }
+    .col-lg-6 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+    .lead {
+        font-size: 0.8rem;
+    }
+    .input-group {
+        width: 100%;
+    }
+}

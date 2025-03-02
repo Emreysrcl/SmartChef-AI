@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/welcome.css">
+
+</head> 
+<%- include('partials/header') %>
+<body>
+   
+   
+        <div class="container py-5 mb-3" style="margin-top: 90px;">
+            <div class="row align-items-center g-5 row p-5  pe-lg-5 pt-lg-3 align-items-center rounded-3 border shadow-lg">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold text-primary">
+                        Welcome, SmartChef AI <%= user.name %>
+                    </h1>
+                    <p class="lead text-muted">
+                        Input your ingredients and get a delicious meal recipe instantly.
+                    </p>
+                    <form action="/search" method="POST" class="mt-4">
+                        <div class="input-group">
+                            <input type="text" name="ingredients" class="form-control rounded-start-pill px-3" 
+                                placeholder="Enter ingredients..." required>
+                            <button class="btn btn-primary rounded-end-pill px-4">
+                                <img src="assets/search.png" width="16" height="16" style="margin-bottom:5px;" class="me-2">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/chefv2.png" class="img-fluid rounded shadow-lg" 
+                        alt="Chef Illustration" width="500" height="400" loading="lazy">
+                </div>
+            </div>
+        </div>
+        
+   
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

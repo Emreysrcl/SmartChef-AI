@@ -1,0 +1,106 @@
+/* Navbar Genel Ayarları */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Linkleri */
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover img {
+    transform: scale(1.2);
+}
+
+.navbar-nav .nav-link.text-danger:hover img {
+    filter: brightness(0.8);
+}
+
+/* Mobil ve Tablet İçin Responsive Düzenlemeler */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    /* Navbar Menü Bağlantıları Tablet İçin Yığılacak */
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* Navbar Resimleri İçin Ölçü Düzenlemesi */
+    .navbar-nav .nav-link img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Navbar Brand için Daha Küçük Resim */
+    .navbar-brand img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Telefon İçin (Max-width: 480px) Düzenlemeler */
+@media (max-width: 480px) {
+    .navbar-nav .nav-link {
+        padding: 8px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* Navbar Resimleri Telefon İçin Daha Küçük */
+    .navbar-nav .nav-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Modal İçerik Alanı */
+    .modal-content {
+        border-radius: 8px;
+    }
+
+    .modal-footer .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

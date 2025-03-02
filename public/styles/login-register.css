@@ -1,0 +1,118 @@
+/* Genel Stil */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    background: url("/assets/b.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigasyon */
+.nav {
+    margin-bottom: 20px;
+}
+
+.nav-pills {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Form stil */
+form {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+}
+
+.active-form {
+    display: block;
+}
+
+input, button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Alert */
+.alert {
+    margin: 10px auto;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Tab stil */
+.custom-tab {
+    background-color: #64c8f7;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+.custom-tab:hover, .custom-tab.active {
+    background-color: #41a7d5;
+    transform: scale(1.05);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    form {
+        width: 40%;
+    }
+
+    .nav-pills {
+        font-size: 0.9rem;
+    }
+
+    .custom-tab {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 60%;
+    }
+
+    .nav-pills {
+        font-size: 0.8rem;
+    }
+
+    .custom-tab {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 80%;
+    }
+
+    .nav-pills {
+        font-size: 0.7rem;
+    }
+
+    .custom-tab {
+        padding: 5px 10px;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

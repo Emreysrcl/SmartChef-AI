@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Sayfanın en az ekran yüksekliği kadar olmasını sağlar */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* İçeriğin dinamik olarak genişlemesini sağlar */
+}
+
+footer {
+    background-color: #ffffff; /* Navbar ile uyumlu açık renk */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Üst gölgelendirme */
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto; /* Footer'ın her zaman en altta olmasını sağlar */
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}

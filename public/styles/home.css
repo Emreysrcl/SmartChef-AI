@@ -1,0 +1,90 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("/assets/b.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ana Konteyner */
+.cover-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Başlık */
+.cover-heading {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #1b7d9a;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Metin */
+.lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Buton */
+.btn-primary {
+    background-color: #1b7d9a;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #135d75;
+    transform: scale(1.05);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .cover-heading {
+        font-size: 4.5rem;
+    }
+    .lead {
+        font-size: 1.3rem;
+    }
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-heading {
+        font-size: 3.5rem;
+    }
+    .lead {
+        font-size: 1.2rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-heading {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
