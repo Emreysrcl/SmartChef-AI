@@ -34,11 +34,11 @@
 
 ## **Key Features**
 
-✅ User Registration & Login – Secure authentication system with personalized user profiles.
-✅ AI-Powered Recipe Generation – Create unique recipes based on available ingredients.
-✅ Explore & Save Recipes – Browse AI-generated meals and save favorites.
-✅ Responsive Design – Optimized for seamless use on desktop and mobile devices.
-✅ Automatic Image Retrieval – Fetch relevant meal images using Google Search API.
+- ✅ User Registration & Login – Secure authentication system with personalized user profiles.
+- ✅ AI-Powered Recipe Generation – Create unique recipes based on available ingredients.
+- ✅ Explore & Save Recipes – Browse AI-generated meals and save favorites.
+- ✅ Responsive Design – Optimized for seamless use on desktop and mobile devices.
+- ✅ Automatic Image Retrieval – Fetch relevant meal images using Google Search API.
 
 ---
 
@@ -120,7 +120,7 @@ Distributed under the MIT License. See [MIT License](https://opensource.org/lice
 - **LinkedIn:** [Emre Yaşar Çal](https://www.linkedin.com/in/emre-ya%C5%9Far-%C3%A7al-3562ab203/)  
 - **Instagram:** [@emreysrcl](https://www.instagram.com/emreysrcl/?hl=tr)  
 
-**Project Link:** [Bugun Ne Pisirdin](https://github.com/Emreysrcl/Bugun-Ne-Pisirdin)
+**Project Link:** [SmartChef-AI](https://github.com/Emreysrcl/SmartChef-AI)
 
 ---
 
