@@ -93,9 +93,9 @@ Ensure you have the following installed:
 
 ## **Usage**
 
- **Sign up/Login** – Create an account to start sharing your meals.
- **Generate Recipe** – Input your available ingredients and let the AI suggest creative recipes based on them.
- **Save Recipe** – Save your favorite AI-generated recipes or meals shared by others for easy access.
+- **Sign up/Login** – Create an account to start sharing your meals.
+- **Generate Recipe** – Input your available ingredients and let the AI suggest creative recipes based on them.
+- **Save Recipe** – Save your favorite AI-generated recipes or meals shared by others for easy access.
 
 
 ---
