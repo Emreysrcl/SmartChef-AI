@@ -8,7 +8,10 @@
   <tr>
     <td> <img src="./public/preview/homesmart.png" alt="Home" width="500"></td>
     <td><img src="./public/preview/searchsmart.png" alt="Search" width="500"></td>
-    <td><img src="./public/preview/profilsmart.png" alt="Profil" width="500"></td>
+   
+  </tr>
+  <tr>
+     <td><img src="./public/preview/profilsmart.png" alt="Profil" width="500"></td>
   </tr>
 </table>
 
