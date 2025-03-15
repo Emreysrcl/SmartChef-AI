@@ -1,5 +1,7 @@
 <h1 align="center">SMARTCHEF-AI</h1>
 
+
+<div align="center"> 
 <table>
   <tr>
     <td><img src="./public/preview/anasayfasmart.png" alt="Welcome" width="500"></td>
