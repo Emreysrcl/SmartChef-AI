@@ -27,30 +27,30 @@
 ---
 
 ## **About The Project**
-
-**Ailelik Mi?** is a web application where users can search for movies or TV shows and instantly learn whether they are family-friendly. The platform offers AI-powered content insights, allows users to explore age-appropriateness, share comments, save favorites, and watch trailers. It integrates external APIs for media data and visuals, and uses PostgreSQL for managing user and content data, providing an engaging and informative viewing experience for families.
+**SmartChef-AI** is a web application where users can generate AI-powered recipes based on available ingredients, discover meal ideas, and connect with fellow food enthusiasts. The platform allows users to share their meals, add descriptions, save recipes, and explore dishes from others. It integrates Google Generative AI for recipe suggestions and Google Custom Search API for retrieving relevant meal images, while using PostgreSQL for data management, offering an engaging and efficient cooking experience.
 
 ---
 
 ## **Key Features**
 
 - ✅ User Registration & Login – Secure authentication system with personalized user profiles.
-- ✅ AI-Powered Content Analysis – Instantly assess the family-friendliness of movies or series using AI support.
-- ✅ Search & Save Media – Easily search for titles, view details, and save your favorites for later.
-- ✅ Responsive Design – Seamlessly optimized for both desktop and mobile usage.
-- ✅ Automatic Image & Trailer Integration – Retrieve relevant visuals and trailers via external APIs for a rich media experience.
+- ✅ AI-Powered Recipe Generation – Create unique recipes based on available ingredients.
+- ✅ Explore & Save Recipes – Browse AI-generated meals and save favorites.
+- ✅ Responsive Design – Optimized for seamless use on desktop and mobile devices.
+- ✅ Automatic Image Retrieval – Fetch relevant meal images using Google Search API.
 
 ---
 
 ## **Built With**
 
-- [Node.js & Express.js](https://nodejs.org/en) - Backend framework for building the server and routing logic
-- [EJS](https://ejs.co) - Template engine for rendering dynamic HTML pages
-- [PostgreSQL](https://www.postgresql.org) - Relational database used for managing users, media data, and saved content
-- [Bootstrap](https://getbootstrap.com) - CSS framework for responsive and modern UI components
-- [Multer](https://github.com/expressjs/multer) - Middleware for handling image uploads (e.g., user profiles, media visuals) 
-- [CSS](https://www.w3schools.com/css/) - Custom styling for layout, responsiveness, and visual enhancements
-- [Google Generative AI & Custom Search API](https://ai.google.dev/aistudio?hl=tr) - Used for analyzing media content and retrieving relevant images/trailers
+- [Node.js & Express.js](https://nodejs.org/en) - Backend framework  
+- [EJS](https://ejs.co) - Template engine for dynamic content  
+- [PostgreSQL](https://www.postgresql.org) - Database for storing user data and meals  
+- [Bootstrap](https://getbootstrap.com) - Styling and responsive design  
+- [Multer](https://github.com/expressjs/multer) - Handling image uploads  
+- [CSS](https://www.w3schools.com/css/) - Additional styling
+- [Google Custom Search API](https://developers.google.com/custom-search/v1/overview?hl=tr) - Retrieves relevant meal images from the web
+- [Google Generative AI](https://ai.google.dev/aistudio?hl=tr) - Powers AI-driven recipe generation based on user input
 
 
 
@@ -70,11 +70,11 @@ Ensure you have the following installed:
 
  **Clone the repository:**
    ```sh
-   git clone https://github.com/Emreysrcl/AilelikMi.git
+   git clone https://github.com/Emreysrcl/SmartChef-AI.git
    ```
  **Navigate to the project directory:**
    ```sh
-   cd Ailelik-Mi-Project
+   cd SMARTCHEFAI
    ```
  **Install dependencies:**
    ```sh
@@ -94,13 +94,12 @@ Ensure you have the following installed:
 
 ---
 
+
 ## **Usage**
 
-- **Sign up/Login** – Create an account to access personalized features and save your favorite media.
-- **Search for a Title** – Enter the name of a movie or TV show to check its family-friendliness and view details.
-- **View Details & Trailer** – Explore content info like genre, actors, platform, and watch the trailer if available.
-- **Save & Comment** – Save titles to your profile and share your thoughts with others by leaving comments.
-
+- **Sign up/Login** – Create an account to start sharing your meals.
+- **Generate Recipe** – Input your available ingredients and let the AI suggest creative recipes based on them.
+- **Save Recipe** – Save your favorite AI-generated recipes or meals shared by others for easy access.
 
 
 
